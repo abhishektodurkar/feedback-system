@@ -1,0 +1,6 @@
+{
+  "name": "clearresponse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ClearResponse feedback system with authentication, analytics, moderation, and exports."
+}

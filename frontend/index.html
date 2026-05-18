@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClearResponse Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="auth-shell login-shell">
+    <section class="panel auth-card">
+      <div class="brand"><span class="brand-mark">C</span> ClearResponse</div>
+      <h2>Welcome back</h2>
+
+      <form id="loginForm" class="form-grid">
+        <label>Login as
+          <select id="role" required>
+            <option value="user">Normal User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
+        <label>Email
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </label>
+        <label>Password
+          <input type="password" id="password" placeholder="Enter password" required />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="actions">
+        <a href="register.html">Create account</a>
+      </div>
+    </section>
+  </main>
+  <script src="js/auth.js"></script>
+</body>
+</html>

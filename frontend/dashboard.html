@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <div class="brand"><span class="brand-mark">C</span> ClearResponse</div>
+        <h2>Admin dashboard</h2>
+        <p class="muted">Analytics, moderation, form versions, audit logs, and exports.</p>
+      </div>
+      <div class="actions">
+        <button class="success" onclick="exportFeedback('json')">Export JSON</button>
+        <button class="warning" onclick="exportFeedback('csv')">Export CSV</button>
+        <button class="secondary" onclick="logout()">Logout</button>
+      </div>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat"><span class="muted">Total Feedback</span><strong id="totalFeedback">0</strong></div>
+      <div class="stat"><span class="muted">Average Rating</span><strong id="averageRating">0.0</strong></div>
+      <div class="stat"><span class="muted">High Priority</span><strong id="highPriority">0</strong></div>
+      <div class="stat"><span class="muted">Open Items</span><strong id="openItems">0</strong></div>
+    </section>
+
+    <section class="dashboard-grid">
+      <div class="panel">
+        <p class="eyebrow">Visual Analytics</p>
+        <h3>Feedback overview</h3>
+        <div id="charts" class="chart-list"></div>
+
+        <div class="compact-form">
+          <p class="eyebrow">Custom Form Version</p>
+          <label>Form title
+            <input id="newFormTitle" placeholder="Feedback Form" />
+          </label>
+          <label>Categories
+            <input id="newCategories" placeholder="Website, Service, Support, Suggestion" />
+          </label>
+          <label>Channels
+            <input id="newChannels" placeholder="Website, Mobile, Email, In person" />
+          </label>
+          <button onclick="saveFormVersion()">Create New Version</button>
+        </div>
+
+        <div class="compact-form">
+          <p class="eyebrow">Audit Logs</p>
+          <div id="auditList" class="audit-list"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <p class="eyebrow">Moderation</p>
+        <h3>Feedback tracking</h3>
+        <div id="feedbackList" class="feedback-stack"></div>
+      </div>
+    </section>
+  </main>
+  <script src="js/admin.js"></script>
+</body>
+</html>

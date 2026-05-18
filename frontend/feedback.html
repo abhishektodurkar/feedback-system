@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <div class="brand"><span class="brand-mark">C</span> ClearResponse</div>
+        <h2>Submit feedback</h2>
+        <p class="muted">Your active form version and feedback history are tracked automatically.</p>
+      </div>
+      <button class="secondary" onclick="logout()">Logout</button>
+    </header>
+
+    <section class="dashboard-grid">
+      <div class="panel">
+        <p class="eyebrow" id="formVersion">Active form</p>
+        <h3 id="formTitle">Feedback Form</h3>
+        <div id="notice"></div>
+
+        <div class="form-grid">
+          <label>Title
+            <input id="title" placeholder="Short summary" />
+          </label>
+          <div class="two-cols">
+            <label>Category
+              <select id="category"></select>
+            </label>
+            <label>Channel
+              <select id="channel"></select>
+            </label>
+          </div>
+          <label>Rating
+            <select id="rating">
+              <option value="5">5 - Excellent</option>
+              <option value="4">4 - Good</option>
+              <option value="3">3 - Average</option>
+              <option value="2">2 - Poor</option>
+              <option value="1">1 - Critical</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea id="message" placeholder="Write your feedback here..." required></textarea>
+          </label>
+          <button onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <p class="eyebrow">Tracking</p>
+        <h3>Your feedback history</h3>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </section>
+  </main>
+  <script src="js/feedback.js"></script>
+</body>
+</html>

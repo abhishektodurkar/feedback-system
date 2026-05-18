@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="auth-shell login-shell">
+    <section class="panel auth-card">
+      <div class="brand"><span class="brand-mark">C</span> ClearResponse</div>
+      <h2>Create account</h2>
+
+      <form id="registerForm" class="form-grid">
+        <label>Register as
+          <select id="role" required>
+            <option value="user">Normal User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
+        <label>Name
+          <input type="text" id="name" placeholder="Your name" required />
+        </label>
+        <label>Email
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </label>
+        <label>Password
+          <input type="password" id="password" placeholder="Create password" required />
+        </label>
+        <button type="submit">Register</button>
+      </form>
+
+      <div class="actions">
+        <a href="index.html">Already have an account?</a>
+      </div>
+    </section>
+  </main>
+  <script src="js/auth.js"></script>
+</body>
+</html>
